@@ -144,11 +144,11 @@ services:
       cgw-redis:
         condition: service_healthy
 
-  ui:
-    image: safeglobal/safe-wallet-web:${UI_VERSION}
-    env_file:
-      - container_env_files/ui.env
-    depends_on:
-      - nginx
-    ports:
-      - "${REVERSE_PROXY_UI_PORT}:8080"
+  # ui:
+  #   image: safeglobal/safe-wallet-web:${UI_VERSION}
+  #   env_file:
+  #     - container_env_files/ui.env
+  #   depends_on:
+  #     - nginx
+  #   ports:
+  #     - "${REVERSE_PROXY_UI_PORT}:8080"
